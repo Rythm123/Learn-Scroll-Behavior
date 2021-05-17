@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .maincontainer{
+        scroll-snap-type: y mandatory;
+        width: 70%;
+        height: 80vh;
+        border: 1px solid black;
+        margin: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .sec{
+        height: 100%;
+        width: 100%;
+        border: 2px solid blue;
+        scroll-snap-align: start;
+    }
+</style>
+<body>
+    <div class="maincontainer">
+        <div class="sec sec1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nulla ducimus minima exercitationem necessitatibus, totam eaque laudantium est similique cumque ex officia a nemo possimus?
+            <button class="clickme">Click here</button>
+        </div>
+        <div class="sec" id="sec2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nulla ducimus minima exercitationem necessitatibus, totam eaque laudantium est similique cumque ex officia a nemo possimus?</div>
+        <div class="sec sec3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nulla ducimus minima exercitationem necessitatibus, totam eaque laudantium est similique cumque ex officia a nemo possimus?</div>
+        <div class="sec sec4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nulla ducimus minima exercitationem necessitatibus, totam eaque laudantium est similique cumque ex officia a nemo possimus?</div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<!-- <script>
+
+var lastScrollTop = 0;
+$(".maincontainer").scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       // downscroll code
+       $('.maincontainer').animate({
+        scrollTop: $("#sec2").offset().top
+    }, 1000);
+   } else {
+      // upscroll code
+   }
+   lastScrollTop = st;
+});
+
+</script> -->
+</html>
